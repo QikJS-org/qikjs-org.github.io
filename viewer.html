@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QikJS Tutorial Viewer</title>
+  <link rel="stylesheet" href="/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <nav class="nav">
+    <div class="logo-area">
+      <img src="/assets/logo.png" class="logo" />
+      <span class="title">QikJS</span>
+    </div>
+    <button id="toggle-theme">🌙</button>
+  </nav>
+
+  <main class="tutorial-viewer">
+    <a href="/tutorials.html" class="btn btn-light">⬅ Back to Tutorials</a>
+    <div id="content" class="markdown-content"></div>
+  </main>
+
+  <script src="/theme.js"></script>
+  <script>
+    // Get Markdown file from query parameter
+    const params = new URLSearchParams(window.location.search);
+    const file = params.get('file');
+
+    const contentDiv = document.getElementById('content');
+
+    if(file) {
+      fetch(`/tutorials/${file}`)
+        .then(res => res.text())
+        .then(md => {
+          contentDiv.innerHTML = marked.parse(md);
+        })
+        .catch(err => {
+          contentDiv.innerHTML = "<p>Unable to load tutorial.</p>";
+          console.error(err);
+        });
+    } else {
+      contentDiv.innerHTML = "<p>No tutorial selected.</p>";
+    }
+  </script>
+</body>
+</html>
