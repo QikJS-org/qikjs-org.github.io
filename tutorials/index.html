@@ -8,6 +8,7 @@
 </head>
 
 <body>
+  <!-- NAVIGATION -->
   <nav class="nav">
     <div class="logo-area">
       <img src="/assets/logo.png" class="logo" />
@@ -16,27 +17,69 @@
     <button id="toggle-theme">🌙</button>
   </nav>
 
-  <main class="tutorial-list">
-    <h1>JavaScript Tutorials</h1>
-    <p>Select a topic below to start learning.</p>
+  <!-- HERO / HEADER -->
+  <header class="hero hero-small">
+    <h1>QikJS Tutorials</h1>
+    <p>Learn JavaScript quickly and efficiently. Click a topic to start learning!</p>
+    <a href="/" class="btn btn-light">🏠 Home</a>
+  </header>
 
-    <ul>
-      <li><a href="./intro-to-js.md">Introduction to JavaScript</a></li>
-      <li><a href="./variables.md">Variables, Types & Operators</a></li>
-      <li><a href="./functions.md">Functions & Arrow Functions</a></li>
-      <li><a href="./arrays.md">Arrays & Objects</a></li>
-      <li><a href="./async-await.md">Async & Await</a></li>
-      <li><a href="./fetch-api.md">Using Fetch API</a></li>
-      <li><a href="./modules.md">JS Modules & Imports</a></li>
-      <li><a href="./event-loop.md">JavaScript Event Loop</a></li>
-      <li><a href="./web-app.md">Build a Simple Web App</a></li>
-    </ul>
+  <!-- TUTORIAL LIST -->
+  <main class="tutorial-list">
+    <div class="tutorial-cards">
+      <a class="card" href="./intro-to-js.md">
+        <h3>Introduction to JavaScript</h3>
+        <p>Learn the basics of JavaScript and start coding instantly.</p>
+      </a>
+
+      <a class="card" href="./variables.md">
+        <h3>Variables, Types & Operators</h3>
+        <p>Understand how to store, manipulate, and compare data in JS.</p>
+      </a>
+
+      <a class="card" href="./functions.md">
+        <h3>Functions & Arrow Functions</h3>
+        <p>Reusable code blocks and modern ES6 arrow functions explained.</p>
+      </a>
+
+      <a class="card" href="./arrays.md">
+        <h3>Arrays & Objects</h3>
+        <p>Learn to store collections and structured data effectively.</p>
+      </a>
+
+      <a class="card" href="./async-await.md">
+        <h3>Async & Await</h3>
+        <p>Work with asynchronous code cleanly using async/await.</p>
+      </a>
+
+      <a class="card" href="./fetch-api.md">
+        <h3>Using Fetch API</h3>
+        <p>Learn how to fetch data from servers and APIs easily.</p>
+      </a>
+
+      <a class="card" href="./modules.md">
+        <h3>JS Modules & Imports</h3>
+        <p>Split your code into modular files for better organization.</p>
+      </a>
+
+      <a class="card" href="./event-loop.md">
+        <h3>JavaScript Event Loop</h3>
+        <p>Understand how JavaScript handles asynchronous operations.</p>
+      </a>
+
+      <a class="card" href="./web-app.md">
+        <h3>Build a Simple Web App</h3>
+        <p>Create a small web application and manipulate the DOM.</p>
+      </a>
+    </div>
   </main>
 
+  <!-- FOOTER -->
   <footer>
     © QikJS Tutorials
   </footer>
 
+  <!-- THEME SCRIPT -->
   <script src="/theme.js"></script>
 </body>
 </html>
