@@ -1,27 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>QikJS — JavaScript Tutorials</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QikJS — Fast JavaScript Tutorials & Tools</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <header>
-    <img src="assets/logo.png" class="logo" />
-    <h1>QikJS</h1>
-    <p>Fast JavaScript tutorials, tools, and open-source packages.</p>
+  <nav class="nav">
+    <div class="logo-area">
+      <img src="assets/logo.png" class="logo" />
+      <span class="title">QikJS</span>
+    </div>
+    <button id="toggle-theme">🌙</button>
+  </nav>
+
+  <header class="hero">
+    <h1>Learn JavaScript the <span class="accent">quick</span> way.</h1>
+    <p>Clean tutorials. Practical code. Free utilities.</p>
+    <a href="/tutorials/" class="btn">Explore Tutorials</a>
   </header>
 
-  <h2>Tutorials</h2>
-  <ul>
-    <li><a href="tutorials/intro-to-js.md">Introduction to JavaScript</a></li>
-    <li><a href="tutorials/making-a-discord-bot.md">Build a Moderation Discord Bot</a></li>
-    <li><a href="tutorials/arrays-explained.md">Arrays Explained Simply</a></li>
-  </ul>
+  <section class="features">
+    <div class="feature">
+      <h2>⚡ Fast Tutorials</h2>
+      <p>Focused guides that teach you exactly what you need—fast.</p>
+    </div>
+
+    <div class="feature">
+      <h2>📦 Free Packages</h2>
+      <p>Useful, lightweight npm modules for everyday JavaScript.</p>
+    </div>
+
+    <div class="feature">
+      <h2>🟣 Simple JavaScript</h2>
+      <p>Designed for beginners and quick learners.</p>
+    </div>
+  </section>
 
   <footer>
-    © QikJS — Open-source JavaScript tools.
+    © QikJS — Open-source JavaScript tools & tutorials.
   </footer>
+
+  <script src="theme.js"></script>
 </body>
 </html>
